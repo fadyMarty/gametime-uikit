@@ -32,7 +32,7 @@ import com.fadymarty.uikit.common.theme.GameTimeTheme
 @Composable
 fun BottomBar(
     modifier: Modifier = Modifier,
-    selectedScreen: BottomBarScreen,
+    selectedScreen: BottomBarScreen? = null,
     onItemClick: (BottomBarScreen) -> Unit,
 ) {
     Box(
