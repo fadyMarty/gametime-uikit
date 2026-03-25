@@ -26,7 +26,7 @@ import com.fadymarty.uikit.bottom_bar.BottomBar
 import com.fadymarty.uikit.bottom_bar.BottomBarScreen
 import com.fadymarty.uikit.buttons.PrimaryButton
 import com.fadymarty.uikit.buttons.TertiaryButton
-import com.fadymarty.uikit.card.GameTimeCard
+import com.fadymarty.uikit.card.LandingCard
 import com.fadymarty.uikit.checkbox.Checkbox
 import com.fadymarty.uikit.common.theme.GameTimeTheme
 import com.fadymarty.uikit.indicator.Pagination
@@ -114,7 +114,7 @@ class MainActivity : ComponentActivity() {
                             }
                         }
                         item {
-                            GameTimeCard(
+                            LandingCard(
                                 title = "Schedule",
                                 description = "Easily schedule event/games\nthen find like minded players for battle. You up for it?",
                                 image = painterResource(R.drawable.img_schedule),

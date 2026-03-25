@@ -43,7 +43,7 @@ import com.fadymarty.uikit.common.theme.GameTimeTheme
  * @param onClick действие при нажатии на карточку
  */
 @Composable
-fun GameTimeCard(
+fun LandingCard(
     modifier: Modifier = Modifier,
     title: String,
     description: String,
@@ -100,9 +100,9 @@ fun GameTimeCard(
 
 @Preview(showBackground = true)
 @Composable
-private fun GameTimePreview() {
+private fun LandingPreview() {
     GameTimeTheme {
-        GameTimeCard(
+        LandingCard(
             title = "Schedule",
             description = "Easily schedule event/games\nthen find like minded players for battle. You up for it?",
             image = painterResource(R.drawable.img_schedule),
