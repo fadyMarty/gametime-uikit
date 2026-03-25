@@ -23,12 +23,12 @@ import com.fadymarty.uikit.common.theme.GameTimeTheme
  * Автор создания: 1
  *
  * @param modifier модификатор
- * @param remainingSeconds оставшееся количество секунд
+ * @param seconds количество секунд
  */
 @Composable
 fun Timer(
     modifier: Modifier = Modifier,
-    remainingSeconds: Int,
+    seconds: Int,
 ) {
     Column(
         modifier = modifier
@@ -49,18 +49,11 @@ fun Timer(
         )
         Spacer(modifier = Modifier.height(14.dp))
         Text(
-            text = formatTime(remainingSeconds),
+            text = "%02d:%02d".format(seconds / 60, seconds % 60),
             style = GameTimeTheme.typography.title1Extrabold,
             color = GameTimeTheme.colorScheme.onAccent
         )
     }
-}
-
-private fun formatTime(remainingSeconds: Int): String {
-    val minutes = remainingSeconds / 60
-    val seconds = remainingSeconds % 60
-
-    return "%02d:%02d".format(minutes, seconds)
 }
 
 @Preview
@@ -68,7 +61,7 @@ private fun formatTime(remainingSeconds: Int): String {
 private fun TimerPreview() {
     GameTimeTheme {
         Timer(
-            remainingSeconds = 0
+            seconds = 0
         )
     }
 }

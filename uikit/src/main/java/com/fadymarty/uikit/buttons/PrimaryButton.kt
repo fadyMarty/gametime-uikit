@@ -4,7 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -36,7 +36,8 @@ fun PrimaryButton(
 ) {
     Box(
         modifier = modifier
-            .size(210.dp, 58.dp)
+            .fillMaxWidth()
+            .height(58.dp)
             .clip(RoundedCornerShape(100.dp))
             .background(
                 Brush.linearGradient(

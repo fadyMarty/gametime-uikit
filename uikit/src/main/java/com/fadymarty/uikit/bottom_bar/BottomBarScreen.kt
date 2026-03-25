@@ -7,35 +7,29 @@ sealed class BottomBarScreen(
     @DrawableRes
     val icon: Int,
     val label: String,
-    val route: BottomBarRoute,
 ) {
     data object Statistics : BottomBarScreen(
         icon = R.drawable.ic_statistics,
-        label = "Statistics",
-        route = BottomBarRoute.Statistics
+        label = "Statistics"
     )
 
     data object DiscoverCombats : BottomBarScreen(
         icon = R.drawable.ic_location_pin,
-        label = "Discover",
-        route = BottomBarRoute.DiscoverCombats
+        label = "Discover"
     )
 
     data object ScheduleGame : BottomBarScreen(
         icon = R.drawable.ic_schedule,
-        label = "Schedule",
-        route = BottomBarRoute.ScheduleGame
+        label = "Schedule"
     )
 
     data object Chat : BottomBarScreen(
         icon = R.drawable.ic_chat,
-        label = "Chat",
-        route = BottomBarRoute.Chat
+        label = "Chat"
     )
 
     data object Profile : BottomBarScreen(
         icon = R.drawable.ic_profile,
-        label = "Profile",
-        route = BottomBarRoute.Profile
+        label = "Profile"
     )
 }
