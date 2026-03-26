@@ -33,7 +33,7 @@ import com.fadymarty.uikit.common.theme.GameTimeTheme
 fun BottomBar(
     modifier: Modifier = Modifier,
     selectedScreen: BottomBarScreen? = null,
-    onItemClick: (BottomBarScreen) -> Unit,
+    onScreenClick: (BottomBarScreen) -> Unit,
 ) {
     Box(
         modifier = modifier
@@ -63,7 +63,7 @@ fun BottomBar(
                     selected = BottomBarScreen.Statistics == selectedScreen,
                     screen = BottomBarScreen.Statistics,
                     onClick = {
-                        onItemClick(BottomBarScreen.Statistics)
+                        onScreenClick(BottomBarScreen.Statistics)
                     }
                 )
                 Spacer(modifier = Modifier.width(26.dp))
@@ -71,7 +71,7 @@ fun BottomBar(
                     selected = BottomBarScreen.DiscoverCombats == selectedScreen,
                     screen = BottomBarScreen.DiscoverCombats,
                     onClick = {
-                        onItemClick(BottomBarScreen.DiscoverCombats)
+                        onScreenClick(BottomBarScreen.DiscoverCombats)
                     }
                 )
                 Spacer(modifier = Modifier.weight(1f))
@@ -79,7 +79,7 @@ fun BottomBar(
                     selected = BottomBarScreen.Chat == selectedScreen,
                     screen = BottomBarScreen.Chat,
                     onClick = {
-                        onItemClick(BottomBarScreen.Chat)
+                        onScreenClick(BottomBarScreen.Chat)
                     }
                 )
                 Spacer(modifier = Modifier.width(38.dp))
@@ -87,7 +87,7 @@ fun BottomBar(
                     selected = BottomBarScreen.Profile == selectedScreen,
                     screen = BottomBarScreen.Profile,
                     onClick = {
-                        onItemClick(BottomBarScreen.Profile)
+                        onScreenClick(BottomBarScreen.Profile)
                     }
                 )
             }
@@ -95,7 +95,7 @@ fun BottomBar(
                 modifier = Modifier.offset(y = (-38).dp),
                 screen = BottomBarScreen.ScheduleGame,
                 onClick = {
-                    onItemClick(BottomBarScreen.ScheduleGame)
+                    onScreenClick(BottomBarScreen.ScheduleGame)
                 }
             )
         }
@@ -172,7 +172,7 @@ private fun BottomBarPreview() {
     GameTimeTheme {
         BottomBar(
             selectedScreen = BottomBarScreen.DiscoverCombats,
-            onItemClick = {}
+            onScreenClick = {}
         )
     }
 }

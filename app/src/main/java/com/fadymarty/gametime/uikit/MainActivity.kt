@@ -127,23 +127,23 @@ class MainActivity : ComponentActivity() {
                             ) {
                                 BottomBar(
                                     selectedScreen = BottomBarScreen.Statistics,
-                                    onItemClick = {}
+                                    onScreenClick = {}
                                 )
                                 BottomBar(
                                     selectedScreen = BottomBarScreen.DiscoverCombats,
-                                    onItemClick = {}
+                                    onScreenClick = {}
                                 )
                                 BottomBar(
                                     selectedScreen = BottomBarScreen.ScheduleGame,
-                                    onItemClick = {}
+                                    onScreenClick = {}
                                 )
                                 BottomBar(
                                     selectedScreen = BottomBarScreen.Chat,
-                                    onItemClick = {}
+                                    onScreenClick = {}
                                 )
                                 BottomBar(
                                     selectedScreen = BottomBarScreen.Profile,
-                                    onItemClick = {}
+                                    onScreenClick = {}
                                 )
                             }
                         }
