@@ -8,7 +8,6 @@ import androidx.compose.ui.graphics.vector.PathParser
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.LayoutDirection
 
-
 class BottomBarShape : Shape {
 
     override fun createOutline(
@@ -18,9 +17,10 @@ class BottomBarShape : Shape {
     ): Outline {
         val scaleMatrix = Matrix()
         val path = PathParser().parsePathString(PATH_DATA).toPath()
+        val rectPath = path.getBounds()
         scaleMatrix.scale(
-            x = size.width / 375f,
-            y = size.height / 109f
+            size.width / rectPath.width,
+            size.height / rectPath.height
         )
         path.transform(scaleMatrix)
         return Outline.Generic(path)

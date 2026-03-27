@@ -12,7 +12,7 @@ object GameTimePalette {
     val InputBg = Color(0xFFF7F7FA)
     val InputStroke = Color(0xFFE6E6E6)
     val InputIcon = Color(0xFFBFC7D1)
-    val Placeholder = Color(0xFF98989A)
+    val Placeholder = Color(0xFFC9C9C9)
     val Description = Color(0xFF8787A1)
     val CardStroke = Color(0xFFF2F2F2)
 }
