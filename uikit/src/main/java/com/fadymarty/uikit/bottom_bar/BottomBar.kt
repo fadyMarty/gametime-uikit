@@ -39,11 +39,11 @@ fun BottomBar(
         modifier = modifier
             .fillMaxWidth()
             .height(109.dp)
-            .clip(BottomBarShape())
             .background(
                 Brush.linearGradient(
                     colors = GameTimeTheme.colorScheme.accent
-                )
+                ),
+                shape = FirstBottomBarShape()
             ),
         contentAlignment = Alignment.BottomCenter
     ) {
@@ -91,7 +91,7 @@ fun BottomBar(
                     }
                 )
             }
-            BottomBarActionButton(
+            BottomBarButton(
                 modifier = Modifier.offset(y = (-38).dp),
                 screen = BottomBarScreen.ScheduleGame,
                 onClick = {
@@ -136,7 +136,7 @@ private fun BottomBarItem(
 }
 
 @Composable
-private fun BottomBarActionButton(
+private fun BottomBarButton(
     modifier: Modifier = Modifier,
     screen: BottomBarScreen,
     onClick: () -> Unit,
